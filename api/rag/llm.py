@@ -20,30 +20,30 @@ def generate_answer(prompt: str) -> str:
     raise ValueError(f"Unknown LLM provider: {provider}")
 
 
-def _generate_with_anthropic(prompt: str) -> str:
-    """Generate answer using Anthropic Claude."""
-    try:
-        from anthropic import Anthropic
+# def _generate_with_anthropic(prompt: str) -> str:
+#     """Generate answer using Anthropic Claude."""
+#     try:
+#         from anthropic import Anthropic
 
-        api_key = os.getenv("ANTHROPIC_API_KEY")
-        if not api_key:
-            raise ValueError("ANTHROPIC_API_KEY is not set.")
+#         api_key = os.getenv("ANTHROPIC_API_KEY")
+#         if not api_key:
+#             raise ValueError("ANTHROPIC_API_KEY is not set.")
 
-        client = Anthropic(api_key=api_key)
-        message = client.messages.create(
-            model=os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6"),
-            max_tokens=1024,
-            temperature=0,
-            system=SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": prompt}],
-        )
+#         client = Anthropic(api_key=api_key)
+#         message = client.messages.create(
+#             model=os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6"),
+#             max_tokens=1024,
+#             temperature=0,
+#             system=SYSTEM_PROMPT,
+#             messages=[{"role": "user", "content": prompt}],
+#         )
 
-        answer = message.content[0].text
-        logger.info("Generated answer using Anthropic Claude")
-        return answer
-    except Exception as exc:
-        logger.error("Error generating answer with Anthropic: %s", exc)
-        raise
+#         answer = message.content[0].text
+#         logger.info("Generated answer using Anthropic Claude")
+#         return answer
+#     except Exception as exc:
+#         logger.error("Error generating answer with Anthropic: %s", exc)
+#         raise
 
 
 def _generate_with_azure_openai(prompt: str) -> str:
