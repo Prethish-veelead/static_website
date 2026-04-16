@@ -1,0 +1,13 @@
+react-app/node_modules/
+react-app/dist/
+react-app/.vite/
+react-app/.vite-temp/
+api/venv/
+api/.venv/
+api/__pycache__/
+api/rag/__pycache__/
+api/rag/data/*.pdf
+*.pyc
+.env
+local.settings.json
+.python_packages/
