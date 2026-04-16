@@ -8,6 +8,4 @@ api/__pycache__/
 api/rag/__pycache__/
 api/rag/data/*.pdf
 *.pyc
-.env
-local.settings.json
 .python_packages/

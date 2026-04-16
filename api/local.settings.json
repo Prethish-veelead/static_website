@@ -1,0 +1,20 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    "LLM_PROVIDER": "azure_openai",
+    "EMBEDDING_PROVIDER": "azure_openai",
+    "AZURE_OPENAI_KEY": "7S8QoGvuQ3pCY1I0x4eunWz3d7LFr0JC7fPSszejqTgpdYAJPVtsJQQJ99CDACYeBjFXJ3w3AAABACOGAugd",
+    "AZURE_OPENAI_ENDPOINT": "https://newaichat.openai.azure.com/",
+    "AZURE_OPENAI_API_VERSION": "2025-01-01-preview",
+    "AZURE_OPENAI_CHAT_DEPLOYMENT": "gpt-4.1",
+    "AZURE_OPENAI_EMBEDDING_DEPLOYMENT": "text-embedding-3-small",
+    "CORS_ORIGINS": "http://localhost:5173,http://localhost:3000,https://your-app.azurestaticapps.net"
+  },
+  "Host": {
+    "CORS": "http://localhost:5173,http://localhost:3000",
+    "CORSCredentials": true
+  }
+}
