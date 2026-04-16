@@ -12,8 +12,8 @@ def generate_answer(prompt: str) -> str:
     """Generate an answer using the configured LLM provider."""
     provider = os.getenv("LLM_PROVIDER", "anthropic").lower()
 
-    if provider == "anthropic":
-        return _generate_with_anthropic(prompt)
+    # if provider == "anthropic":
+    #     return _generate_with_anthropic(prompt)
     if provider == "azure_openai":
         return _generate_with_azure_openai(prompt)
 
